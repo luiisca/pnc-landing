@@ -42,7 +42,7 @@
                             onmouseenter={() => (activeTab = i)}
                             role="listitem"
                         >
-                            <dt class="inline font-semibold text-[initial]">
+                            <dt class="inline font-semibold text-white">
                                 <span
                                     class="icon-xl absolute left-0 top-4 text-accent-400"
                                 >
