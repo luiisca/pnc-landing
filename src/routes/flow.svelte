@@ -6,7 +6,12 @@
         heading: string;
         subheading: string;
         description: string;
-        steps: { icon: keyof typeof ICONS; keyword: string; title: string }[];
+        steps: {
+            icon: keyof typeof ICONS;
+            keyword: string;
+            title: string;
+            demo: string;
+        }[];
     }
     let { pos, heading, subheading, description, steps }: Props = $props();
     let activeTab = $state(0);
@@ -60,6 +65,15 @@
         </div>
         <div
             class={`${isEven(pos) ? "order-2 lg:order-1" : ""} tab-content h-[540px] max-w-xl`}
-        ></div>
+        >
+            <video
+                class="w-full h-full object-cover rounded-md"
+                autoplay
+                controls={false}
+                loop
+                muted
+                src={steps[activeTab].demo}
+            ></video>
+        </div>
     </div>
 </div>
